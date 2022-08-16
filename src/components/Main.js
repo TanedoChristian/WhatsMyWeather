@@ -29,6 +29,7 @@ function Main(){
         
         getWeatherData()
         $("html, body").animate({ scrollTop: $("#scroll").height() }, 1000);
+
         event.preventDefault();
     }
 
