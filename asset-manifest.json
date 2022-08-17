@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/whatsmyweather/static/js/main.4b8a9019.js",
+    "main.js": "/whatsmyweather/static/js/main.dc4dcc95.js",
     "static/js/787.7b94db36.chunk.js": "/whatsmyweather/static/js/787.7b94db36.chunk.js",
     "index.html": "/whatsmyweather/index.html",
-    "main.4b8a9019.js.map": "/whatsmyweather/static/js/main.4b8a9019.js.map",
+    "main.dc4dcc95.js.map": "/whatsmyweather/static/js/main.dc4dcc95.js.map",
     "787.7b94db36.chunk.js.map": "/whatsmyweather/static/js/787.7b94db36.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4b8a9019.js"
+    "static/js/main.dc4dcc95.js"
   ]
 }
