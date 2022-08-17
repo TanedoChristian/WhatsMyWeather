@@ -37,7 +37,7 @@ function Main(){
  
 
     const getWeatherData = async () => {
-        await axios.get(`http://api.weatherstack.com/current?access_key=8fb3567e9720a15308b6d864efde7ef6&query=${city}`)
+        await axios.get(`http://api.weatherstack.com/current?access_key=40f1940655420be7a5efdac148ef07e2&query=${city}`)
         .then(res=>{
             myData = res.data
 
@@ -46,6 +46,8 @@ function Main(){
             temp.region = myData["location"]["region"]
             temp.name = myData["location"]["name"]
             setWeatherDescription(temp)
+
+            console.log(res.data)
             
             
 
