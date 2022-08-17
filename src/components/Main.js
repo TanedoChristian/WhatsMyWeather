@@ -13,6 +13,7 @@ function Main(){
 
     var temp = {
         description: '',
+        name: '',
         region: '',
         temperature: ''
     }
@@ -35,15 +36,15 @@ function Main(){
 
  
 
-    const getWeatherData = () => {
-        axios.get(`http://api.weatherstack.com/current?access_key=8fb3567e9720a15308b6d864efde7ef6&query=${city}`)
+    const getWeatherData = async () => {
+        await axios.get(`http://api.weatherstack.com/current?access_key=8fb3567e9720a15308b6d864efde7ef6&query=${city}`)
         .then(res=>{
             myData = res.data
 
             temp.description = myData["current"]["weather_descriptions"]
             temp.temperature = myData["current"]["temperature"]
             temp.region = myData["location"]["region"]
-
+            temp.name = myData["location"]["name"]
             setWeatherDescription(temp)
             
             
@@ -78,7 +79,10 @@ function Main(){
         <section>
 
             <div className="scroll" id="scroll">
-            <h1>{weatherDescription["temperature"]} {weatherDescription["description"]} {weatherDescription["region"]} </h1>
+            <h1> Region : {weatherDescription["region"]} </h1>
+            <h1> City/Province: {weatherDescription["name"]} </h1>
+            <h1> Temperature: {weatherDescription["temperature"]} </h1>
+            <h1> Description: {weatherDescription["description"]} </h1>
             <div id="map"></div>
             </div>
 
